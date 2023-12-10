@@ -6,7 +6,7 @@ export default function Role02() {
             <div className="card-body">
                 <h5 className="card-title">Role 02</h5>
                 <p className="card-text">Just visible if user has role02.</p>
-                <LogoutButton/>
+                <LogoutButton />
             </div>
         </div>
     );

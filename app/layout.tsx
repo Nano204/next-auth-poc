@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "@/app/components/navbar";
+import NextAuthProvider from "./next-auth-provider.component";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body className={inter.className}>
                 <Navbar />
-                {children}
+                <NextAuthProvider>{children}</NextAuthProvider>
             </body>
         </html>
     );
