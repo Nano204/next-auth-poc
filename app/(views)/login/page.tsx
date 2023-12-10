@@ -1,3 +1,5 @@
+import LoginButton from "@/app/components/login-button";
+
 export default function Login() {
     return (
         <div className="card" style={{ width: "18rem" }}>
@@ -31,9 +33,7 @@ export default function Login() {
                         emoji.
                     </div>
                 </div>
-                <button type="button" className="btn btn-primary">
-                    Login
-                </button>
+                <LoginButton />
             </div>
         </div>
     );
