@@ -1,5 +1,6 @@
 "use client";
 import { SessionProvider, useSession } from "next-auth/react";
+import SessionStateBanner from "./components/session-state-banner.component";
 
 export default function NextAuthProvider({ children }: { children: React.ReactNode }) {
     return (
@@ -19,7 +20,7 @@ function Auth({ children }: { children: React.ReactNode }) {
 
     return (
         <div>
-            <p>{JSON.stringify(session, null, 2)}</p>
+            <SessionStateBanner />
             {children}
         </div>
     );

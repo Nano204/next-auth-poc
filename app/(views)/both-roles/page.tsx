@@ -1,6 +1,10 @@
-import LogoutButton from "@/app/components/logout-button";
+'use client'
+import LogoutButton from "@/app/components/logout-button.comoponent";
+import { useSession } from "next-auth/react";
 
 export default function BothRoles() {
+    const { status } = useSession();
+    if (status === "authenticated") {
     return (
         <div className="card" style={{ width: "18rem" }}>
             <div className="card-body">
@@ -9,5 +13,11 @@ export default function BothRoles() {
                 <LogoutButton />
             </div>
         </div>
-    );
+    ) } else {
+        return (
+            <div className="alert alert-warning" role="alert">
+                Not authorized
+            </div>
+        );
+    }
 }

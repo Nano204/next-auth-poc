@@ -16,7 +16,6 @@ const authOptions: NextAuthOptions = {
                     requestOptions
                 );
                 const tokenJSON = await token.json();
-                // const token = "222";
 
                 const user01 = { id: "01", role: "role01", tokenJSON };
                 const user02 = { id: "02", role: "role02", tokenJSON };
