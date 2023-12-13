@@ -7,8 +7,9 @@ First, install dependencies:
 ```bash
 npm i
 ```
+Second, set the environment variables creating a `.env.local` file, following the `template.env.local` file structure.
 
-Second, run the development server:
+Third, run the development server:
 
 ```bash
 npm run dev
